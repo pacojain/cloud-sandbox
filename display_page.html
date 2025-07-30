@@ -1,0 +1,22 @@
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Display Data</title>
+        <script>
+            function getQueryParam(name) {
+                const urlParams = new URLSearchParams(window.location.search);
+                return urlParams.get(name);
+            }
+
+            window.onload = function() {
+                const city = getQueryParam('userCity');
+                if (city) {
+                    document.getElementById('displayCity').textContent = "Your city is: " + city;
+                }
+            };
+        </script>
+    </head>
+    <body>
+        <h1 id="displayCity"></h1>
+    </body>
+    </html>
